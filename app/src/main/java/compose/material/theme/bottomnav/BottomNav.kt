@@ -44,9 +44,11 @@ fun BottomNav() {
 @Composable
 fun BottomBar(navController: NavHostController) {
     val screens = listOf(
+        BottomBarScreen.Calendar,
+        BottomBarScreen.Flow,
         BottomBarScreen.Home,
-        BottomBarScreen.Report,
-        BottomBarScreen.Profile
+        BottomBarScreen.Transactions,
+        BottomBarScreen.Profile,
     )
 
     val navStackBackEntry by navController.currentBackStackEntryAsState()
@@ -105,8 +107,8 @@ fun RowScope.AddItem(
         ) {
 
 
-           //* if menu title : Report means we will show badge
-            if(screen.title=="Report"){ // with badge
+            //* if menu title : Report means we will show badge
+            if (screen.title == "Report") { // with badge
                 BadgedBox(badge = { Badge { Text("6") } }) {
                     Icon(
                         painter = painterResource(id = if (selected) screen.icon_focused else screen.icon),
@@ -115,8 +117,7 @@ fun RowScope.AddItem(
                     )
                 }
 
-            }
-            else{
+            } else {
 
                 Icon(
                     painter = painterResource(id = if (selected) screen.icon_focused else screen.icon),
@@ -146,20 +147,4 @@ fun RowScope.AddItem(
 fun BottomNavPreview() {
     BottomNav()
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

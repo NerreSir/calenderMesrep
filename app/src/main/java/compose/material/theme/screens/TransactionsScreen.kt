@@ -10,13 +10,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun ReportScreen() {
+fun TransactionsScreen() {
 
     Column(
         modifier = Modifier.fillMaxSize()
             .background(Color.LightGray)
     ) {
-        Text(text = "Report Screen", fontSize = 20.sp)
+        Text(text = "Transactions Screen", fontSize = 20.sp)
     }
 
 }
