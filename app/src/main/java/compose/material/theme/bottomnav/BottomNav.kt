@@ -82,7 +82,7 @@ fun RowScope.AddItem(
     val selected = currentDestination?.hierarchy?.any { it.route == screen.route } == true
 
     val background =
-        if (selected) MaterialTheme.colorScheme.primary.copy(alpha = 0.6f) else Color.Transparent
+        if (selected) Color(0xFF673AB7) else Color.Transparent
 
     val contentColor =
         if (selected) Color.White else Color.Black
